@@ -1,5 +1,4 @@
 const { parentPort, workerData } = require("worker_threads");
-const RATE_LIMIT = 30; // Requests per worker per second
 
 // Add api key and secret here
 const sailthru = require('sailthru-client').createSailthruClient('API_KEY', 'API_SECRET');
@@ -21,6 +20,7 @@ function apiDeleteWrapped(id, key) {
 }
 
 async function processWorkerData() {
+  const RATE_LIMIT = 10; // Requests per worker per second
   const REQUEST_INTERVAL = 1000 / RATE_LIMIT; // Calculate interval in milliseconds
 
   for (let i = 0; i < workerData.length; i++) {
