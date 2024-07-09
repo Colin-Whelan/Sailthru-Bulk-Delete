@@ -29,6 +29,6 @@ Progress and results will be logged to the console and a `delete_log.txt` file.
 ## Configuration
 numWorkers(delete.js): Controls the number of concurrent workers (default is 4).
 
-RATE_LIMIT(deleteWorker.js): Sets max requests per second per worker (default is 30).
+RATE_LIMIT(deleteWorker.js): Sets max requests per second per worker (default is 10).
 
-This doesn't use any smart limiting at the moment.
+[Sailthru Limits DELETE to just 40 requests per second](https://getstarted.meetmarigold.com/engagebysailthru/Content/developers/api-basics/technical.html?Highlight=rate%20limit#Rate). No use in changing the defaults at this time.
