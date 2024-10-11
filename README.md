@@ -8,10 +8,12 @@ Add your Sailthru API credentials in the `deleteWorker.js` file:
 
 Prepare your CSV file named users_to_delete.csv with the following format:
 
-`blank,email,extid
+```
+blank,email,extid
 ,test+delete1@gmail.com,delete1
 ,,delete2
-,test+delete3@gmail.com,`
+,test+delete3@gmail.com,
+```
 
 **Note: The first column must be blank. Only 1 id type is required for each row.**
 
